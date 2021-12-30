@@ -6,7 +6,7 @@ interface ICreateLinkDTO {
 }
 
 interface ILinksRepository {
-    create({ targetLink, code }: ICreateLinkDTO): Promise<Link>;
+    create({ targetLink, code }: ICreateLinkDTO): Link;
 }
 
 export { ILinksRepository, ICreateLinkDTO };

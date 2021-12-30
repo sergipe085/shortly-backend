@@ -2,7 +2,7 @@ import { Link } from "../../entities/Link";
 import { ICreateLinkDTO, ILinksRepository } from "../ILinksRepository";
 
 class LinksRepository implements ILinksRepository {
-    async create({ targetLink, code }: ICreateLinkDTO): Promise<Link> {
+    create({ targetLink, code }: ICreateLinkDTO): Link {
         const newLink = new Link(targetLink, code);
 
         return newLink;
