@@ -7,6 +7,7 @@ interface ICreateLinkDTO {
 
 interface ILinksRepository {
     create({ targetLink, code }: ICreateLinkDTO): Link;
+    getLink(code: string): Link | undefined;
 }
 
 export { ILinksRepository, ICreateLinkDTO };
