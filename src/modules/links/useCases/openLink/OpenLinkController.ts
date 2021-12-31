@@ -8,7 +8,8 @@ class OpenLinkController {
     handle(req: Request, res: Response): Response {
         const { code } = req.params;
         const link = this.openLinkUseCase.execute({ code });
-        return res.json(link);
+        res.redirect(link.targetLink);
+        return res.json();
     }
 }
 
